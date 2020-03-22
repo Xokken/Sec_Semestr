@@ -29,11 +29,11 @@ public class StreamHome {
         set.add("mccccc");
         set.add("asabco");
         set.add("Aleeeee");
-        String[] ap = {"e","y","u","i","o","a"};
+        String[] letter = {"e","y","u","i","o","a"};
         Set<String> alf = new HashSet<>();
 
-        for (int i = 0; i < ap.length ; i++) {
-            alf.add(ap[i]);
+        for (int i = 0; i < letter.length ; i++) {
+            alf.add(letter[i]);
         }
 
         set.stream().filter(str -> Arrays.stream(str.toLowerCase().split("")).filter(ch -> alf.contains(ch)).count() > 3).forEach(str -> System.out.print(str + " "));
