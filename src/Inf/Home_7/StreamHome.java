@@ -1,4 +1,7 @@
 package Inf.Home_7;
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.*;
 import java.util.stream.Stream;
 
@@ -6,6 +9,7 @@ import java.util.stream.Stream;
 public class StreamHome {
     public static void main(String[] args){
         System.out.println("It compiles senpai!");
+        System.out.println();
 
         //Вывести все элементы листа, которые больше самого большого элемента второго листа (с использованием Stream api)
 
@@ -17,7 +21,6 @@ public class StreamHome {
         test1.add(5);
         test1.add(10);
         test1.add(110);
-        test1.add(306);
         test1.stream().filter(el -> el > test2.stream().max(Comparator.comparingInt(a -> a)).get()).forEach(x -> System.out.println(x + " "));
         System.out.println();
 
