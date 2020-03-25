@@ -1,10 +1,9 @@
 package Inf.Home_10;
 
 import Inf.Home_9.Student;
+import java.io.*
 
-import java.io.DataOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
+// С использованием data
 
 public class StudentOutputStream extends OutputStream {
 

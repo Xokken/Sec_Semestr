@@ -1,11 +1,9 @@
 package Inf.Home_10;
 
 import Inf.Home_9.Student;
+import java.io.*
 
-import java.io.DataInput;
-import java.io.DataInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+// С использованием data
 
 public class StudentInputStream extends InputStream {
 

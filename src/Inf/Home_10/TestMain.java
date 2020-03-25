@@ -1,10 +1,12 @@
 package Inf.Home_10;
 
 import Inf.Home_9.Student;
-
 import java.io.*;
 
 public class TestMain {
+
+    // Тестирование всего написанного мною
+
     public static void main(String[] args) {
         System.out.println("It compiles senpai!");
         System.out.println("##########");
