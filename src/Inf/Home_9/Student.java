@@ -1,10 +1,15 @@
 package Inf.Home_9;
 
-public class Student {
+import java.io.Serializable;
+
+public class Student implements Serializable {
     private String name;
     private char gender;
     private int date;
     private int group;
+
+    public Student(){
+    }
 
     public Student(String name, char gender, int date, int group) {
         this.name = name;
