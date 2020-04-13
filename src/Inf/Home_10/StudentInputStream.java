@@ -1,7 +1,7 @@
 package Inf.Home_10;
 
 import Inf.Home_9.Student;
-import java.io.*
+import java.io.*;
 
 // С использованием data
 
