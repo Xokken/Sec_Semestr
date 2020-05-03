@@ -3,10 +3,16 @@ package Inf.TestClassWork;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class TestOne {
 
     public static void main(String[] args) throws IOException {
+
+        System.out.println("It compiles senpai!");
+        System.out.println("##############################\n");
+
+        /*
         String command = "\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!";
         File file = new File(command);
         if (file.isAbsolute()){
@@ -28,6 +34,8 @@ public class TestOne {
         buf[1] = nameFile.substring(nameFile.lastIndexOf("."));
         System.out.println();
         System.out.println(buf[0] + " " + buf[1]);
+
+         */
 
     }
 }
