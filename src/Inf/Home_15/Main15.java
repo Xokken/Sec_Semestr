@@ -1,6 +1,7 @@
 package Inf.Home_15;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -63,6 +64,18 @@ public class Main15 {
                     break;
                 case "delete ":
                     fileManager.deleteFile(buff[1]);
+                    break;
+                case "cat ":
+                    try {
+                        ArrayList<String> arr = fileManager.catFile(buff[1]);
+                        int i = 0;
+                        for (String line : arr){
+                            System.out.println(arr.get(i));
+                            i++;
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     break;
                 default:
                     System.out.println("Unknown command");

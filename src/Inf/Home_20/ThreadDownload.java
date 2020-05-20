@@ -8,14 +8,13 @@ public class ThreadDownload extends Thread {
     private URL link;
     private String type;
     private String path = "C:\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\src\\Inf\\Home_20\\";
-    private boolean isInterrupted = true;
 
-    public ThreadDownload(String name) {
+    public ThreadDownload(URL name) {
         try {
-            this.link = new URL(name);
-            this.type = new URL(name).openConnection().getContentType();
+            this.link = name;
+            this.type = name.openConnection().getContentType();
         } catch (IOException e) {
-            System.out.println("Uncorrected URL senpai!");;
+            System.out.println("Uncorrected URL senpai!");
         }
     }
 
@@ -33,7 +32,7 @@ public class ThreadDownload extends Thread {
                     buf.rewind();
                     out.write(buf.array());
                     buf.rewind();
-                    Thread.sleep(50);
+                    Thread.sleep(100);
                 }
                 else{
                     throw new InterruptedException();

@@ -4,6 +4,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.ArrayList;
 
 public class MainLogic {
     private File defoultPath = new File("src");
@@ -94,17 +95,19 @@ public class MainLogic {
         }
     }
 
-    public void catFile(String nameFile) throws IOException {
+    public ArrayList<String> catFile(String nameFile) throws IOException {
         File cattFile = new File(nameFile);
         String[] buf = Files.probeContentType(cattFile.toPath()).split("/");
         if ((cattFile.isAbsolute()) && buf[0].equals("text")){
-
+            return (ArrayList<String>) Files.readAllLines(cattFile.toPath());
         }
         else{
             cattFile = new File(currentPath + "\\" + nameFile);
             if (buf[0].equals("text")) {
+                return (ArrayList<String>) Files.readAllLines(cattFile.toPath());
             }
         }
+        return null;
     }
 
     public File getCurrenPath() {
