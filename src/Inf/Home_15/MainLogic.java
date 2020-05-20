@@ -94,6 +94,19 @@ public class MainLogic {
         }
     }
 
+    public void catFile(String nameFile) throws IOException {
+        File cattFile = new File(nameFile);
+        String[] buf = Files.probeContentType(cattFile.toPath()).split("/");
+        if ((cattFile.isAbsolute()) && buf[0].equals("text")){
+
+        }
+        else{
+            cattFile = new File(currentPath + "\\" + nameFile);
+            if (buf[0].equals("text")) {
+            }
+        }
+    }
+
     public File getCurrenPath() {
         return currentPath;
     }

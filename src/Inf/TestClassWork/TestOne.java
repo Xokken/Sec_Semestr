@@ -3,6 +3,7 @@ package Inf.TestClassWork;
 import java.awt.*;
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.util.ArrayList;
 
 public class TestOne {
@@ -12,30 +13,11 @@ public class TestOne {
         System.out.println("It compiles senpai!");
         System.out.println("##############################\n");
 
-        /*
-        String command = "\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!";
+        String command = "\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\src\\TestForFilemanag.txt";
         File file = new File(command);
-        if (file.isAbsolute()){
-            System.out.println(file.getAbsolutePath());
-        }
-        else{
-            System.out.println("NO!");;
-        }
-        Desktop desktop = Desktop.getDesktop();
-        //desktop.open(new java.io.File("C:\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\src\\anime-pictures.net-548687.jpg"));
+        String[] buf = Files.probeContentType(file.toPath()).split("/");
+        System.out.println(buf[0]);
 
-        File copied = new File("\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\src\\anime-pictures.net-548687.jpg");
-        File originalPath = new File("\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\TestForFile.jpg");
-
-
-        String[] buf = new String[2];
-        String nameFile = "anime-pictures.net-548687.jpg";
-        buf[0] = nameFile.substring(0,nameFile.lastIndexOf("."));
-        buf[1] = nameFile.substring(nameFile.lastIndexOf("."));
-        System.out.println();
-        System.out.println(buf[0] + " " + buf[1]);
-
-         */
 
     }
 }

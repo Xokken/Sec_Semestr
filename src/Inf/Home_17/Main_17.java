@@ -14,6 +14,7 @@ public class Main_17 {
         boolean a = true;
         while (a) {
             ArrayList<Note> arrNote = new ArrayList<>();
+
             while (sc.hasNextInt()) {
                 arrNote.add(new Note(sc.nextInt()));
             }
@@ -30,12 +31,13 @@ public class Main_17 {
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            ArrayList newNotes = readSong(namePath);
-            System.out.println(newNotes.toString());
+            //ArrayList newNotes = readSong(namePath);
+            //System.out.println(newNotes.toString());
 
-            playMusic(newNotes);
+            //playMusic(newNotes);
 
-            break;
+            //break;
+            sc = new Scanner(System.in);
         }
     }
 

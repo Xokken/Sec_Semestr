@@ -31,7 +31,7 @@ public class Home_16_2 {
                 String[] types = type.split("[/;]");
                 System.out.println(type);
                 String pathDownload = "C:\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\src\\Inf\\Home_16\\" + (Math.random() * 10000000) + "." + types[1];
-                try (InputStream in = new URL(nameUrl).openStream();) {
+                try (InputStream in = new URL(nameUrl).openStream()) {
                     Files.copy(in, Paths.get(pathDownload), StandardCopyOption.REPLACE_EXISTING);
                     System.out.println("Success senpai!!!");
                     System.out.println(pathDownload);
