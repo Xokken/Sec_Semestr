@@ -40,7 +40,7 @@ public class ThreadDownload extends Thread {
             }
             System.out.println("Success senpai!!!");
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Uncorrected URL senpai!");
         } catch (InterruptedException e) {
             System.out.println("This thread is died senpai!");
         }

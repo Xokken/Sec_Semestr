@@ -1,6 +1,7 @@
 package Inf.Home_15;
 
 import java.io.IOException;
+import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -67,11 +68,19 @@ public class Main15 {
                     break;
                 case "cat ":
                     try {
-                        ArrayList<String> arr = fileManager.catFile(buff[1]);
+                        ArrayList<String> arr;
+                        if (buff.length == 2) {
+                            arr = fileManager.catFile(buff[1]);
+                        }
+                        else{
+                            arr = fileManager.catFile(buff[1], (buff[2]));
+                        }
                         int i = 0;
-                        for (String line : arr){
-                            System.out.println(arr.get(i));
-                            i++;
+                        if (arr != null) {
+                            for (String line : arr) {
+                                System.out.println(arr.get(i));
+                                i++;
+                            }
                         }
                     } catch (IOException e) {
                         e.printStackTrace();

@@ -1,8 +1,8 @@
 package Inf.Home_15;
 
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
+import java.io.*;
+import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.util.ArrayList;
 
@@ -105,6 +105,42 @@ public class MainLogic {
             cattFile = new File(currentPath + "\\" + nameFile);
             if (buf[0].equals("text")) {
                 return (ArrayList<String>) Files.readAllLines(cattFile.toPath());
+            }
+        }
+        return null;
+    }
+
+    public ArrayList<String> catFile(String nameFile, String chars) throws IOException {
+        ArrayList<String> arr = new ArrayList<>();
+        File cattFile = new File(nameFile);
+        String[] buf = Files.probeContentType(cattFile.toPath()).split("/");
+        if ((cattFile.isAbsolute()) && buf[0].equals("text")){
+            try{
+                BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(cattFile), chars));
+                String line;
+                while ((line = reader.readLine()) != null){
+                    arr.add(line);
+                }
+                return arr;
+            }
+            catch (UnsupportedEncodingException e){
+                System.out.println("Encoding very bad senpai!");
+            }
+        }
+        else{
+            cattFile = new File(currentPath + "\\" + nameFile);
+            if (buf[0].equals("text")) {
+                try {
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(cattFile), chars));
+                    String line;
+                    while ((line = reader.readLine()) != null){
+                        arr.add(line);
+                    }
+                    return arr;
+                }
+                catch (UnsupportedEncodingException e){
+                    System.out.println("Encoding very bad senpai!");
+                }
             }
         }
         return null;
