@@ -130,7 +130,7 @@ public class MainLogic {
         else{
             cattFile = new File(currentPath + "\\" + nameFile);
             if (buf[0].equals("text")) {
-                try {
+                try{
                     BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(cattFile), chars));
                     String line;
                     while ((line = reader.readLine()) != null){

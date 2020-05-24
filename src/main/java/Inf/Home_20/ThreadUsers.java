@@ -64,7 +64,6 @@ public class ThreadUsers extends Thread{
                 int b = (int) Files.size(new File(one.getPath()).toPath());
                 int proc = b * 100 / a;
                 System.out.println(proc + "%");
-                System.out.println(a + " " + b);
             } catch (IOException e) {
                 e.printStackTrace();
             }

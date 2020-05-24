@@ -55,25 +55,5 @@ public class Main_17 {
 
     }
 
-    public static ArrayList<Note> readSong(String file){
-        ArrayList<Note> arrNotes = new ArrayList<>();
-        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            String line;
-            while ((line = reader.readLine()) != null){
-                String[] buff = line.split(" ");
-                int channel = Integer.parseInt(buff[0]);
-                int duration = Integer.parseInt(buff[1]);
-                int volume = Integer.parseInt(buff[2]);
-                int note = Integer.parseInt(buff[3]);
-                boolean singleThread = Boolean.parseBoolean(buff[4]);
-                arrNotes.add(new Note(duration, volume, note, singleThread));
-            }
-            return arrNotes;
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
 }
