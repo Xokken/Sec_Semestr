@@ -23,6 +23,7 @@ public class MySecondCollectionTest {
         col.add(5);
         Iterator it = col.iterator();
         Assert.assertTrue(it instanceof Iterator);
+
     }
 
     @Test
@@ -34,4 +35,5 @@ public class MySecondCollectionTest {
         col.add(5);
         Assert.assertEquals(4, col.size());
     }
+
 }
