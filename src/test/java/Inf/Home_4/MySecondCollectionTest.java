@@ -6,10 +6,10 @@ import org.junit.Test;
 import java.util.Iterator;
 
 
-class MySecondCollectionTest {
+public class MySecondCollectionTest {
 
     @Test
-    void add() {
+    public void add() {
         MySecondCollection<Integer> col = new MySecondCollection<>();
         col.add(5);
         col.add(5);
@@ -17,7 +17,7 @@ class MySecondCollectionTest {
     }
 
     @Test
-    void iterator() {
+    public void iterator() {
         MySecondCollection<Integer> col = new MySecondCollection<>();
         col.add(5);
         col.add(5);
@@ -26,7 +26,7 @@ class MySecondCollectionTest {
     }
 
     @Test
-    void size() {
+    public void size() {
         MySecondCollection<Integer> col = new MySecondCollection<>();
         col.add(5);
         col.add(5);
