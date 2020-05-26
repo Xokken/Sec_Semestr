@@ -32,7 +32,7 @@ public class MySecondCollection <T> extends AbstractCollection<T> implements Ite
 
     @Override
     public Iterator<T> iterator() {
-        return new NewIteratorForColl((T[]) this.arr);
+        return new NewIteratorForColl();
     }
 
 
@@ -51,28 +51,24 @@ public class MySecondCollection <T> extends AbstractCollection<T> implements Ite
 
 
     private class NewIteratorForColl implements Iterator {
-        private Object[] arr;
         private int cursor = 0;
 
-        public NewIteratorForColl(T arr[]) {
-            this.arr = arr;
-        }
 
         public void remove(){
-            arr[cursor-1] = null;
-            cursor--;
+            arr[size() - 1] = null;
+            count--;
         }
 
         @Override
         public boolean hasNext() {
-            return arr.length > cursor;
+            return cursor < size();
         }
 
         @Override
-        public Object next() {
-            Object el = arr[cursor];
+        public T next() {
+            T element = (T) arr[cursor];
             cursor++;
-            return el;
+            return element;
         }
 
     }

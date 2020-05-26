@@ -15,17 +15,17 @@ public class Queue {
     }
 
     public void add(int num){
-        arr[count] = num;
+        arr[count - 1] = num;
         count--;
     }
 
     public int pop(){
         end--;
-        return arr[end-1];
+        return arr[end];
     }
 
     public int peek(){
-        return arr[end];
+        return arr[end - 1];
     }
 
     public int size(){
