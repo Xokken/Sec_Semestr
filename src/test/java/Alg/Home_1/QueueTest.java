@@ -3,7 +3,6 @@ package Alg.Home_1;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 public class QueueTest {
 
@@ -116,8 +115,8 @@ public class QueueTest {
     }
 
     @Test
-    void checkNullEl(){
+    void checkZeroEl(){
         Queue one = new Queue();
-        Assert.assertEquals(0, one.size());
+        Assert.assertEquals(0, one.pop());
     }
 }

@@ -7,7 +7,7 @@ public class Main_20 {
         System.out.println("It compiles senpai!");
         System.out.println("##############################\n");
         ThreadUsers one = new ThreadUsers();
-        one.start();
+        one.run();
     }
 
 }

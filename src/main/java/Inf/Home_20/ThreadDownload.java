@@ -7,7 +7,7 @@ import java.nio.ByteBuffer;
 public class ThreadDownload extends Thread {
     private URL link;
     private String type;
-    private String path = "C:\\Users\\Алексей777\\IdeaProjects\\Semestr_Second_ANIME!\\src\\Inf\\Home_20\\";
+    private String path = "C:\\Users\\Xokken\\IdeaProjects\\Semestr_Second_ANIME!\\src\\Inf\\Home_20\\";
 
     public ThreadDownload(URL name) {
         try {
@@ -26,13 +26,13 @@ public class ThreadDownload extends Thread {
             ByteBuffer buf = ByteBuffer.allocate(5000);
             while (in.available() > 0 ){
                 if (!(isInterrupted())) {
-                    for (int i = 0; i < 5000; i++){
-                        buf.put((byte) in.read());
-                    }
-                    buf.rewind();
-                    out.write(buf.array());
-                    buf.rewind();
-                    Thread.sleep(100);
+                        for (int i = 0; i < 5000; i++){
+                            buf.put((byte) in.read());
+                        }
+                        buf.rewind();
+                        out.write(buf.array());
+                        buf.rewind();
+                        Thread.sleep(100);
                 }
                 else{
                     throw new InterruptedException();
