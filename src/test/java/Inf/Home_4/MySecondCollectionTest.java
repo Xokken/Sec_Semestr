@@ -64,7 +64,11 @@ public class MySecondCollectionTest {
         col.add(5);
         col.add(5);
         col.add(5);
-        Assert.assertEquals(4, col.size());
+        col.add(5);
+        col.add(5);
+        col.add(5);
+        col.add(5);
+        Assert.assertEquals(8, col.size());
     }
 
     @Test
@@ -104,6 +108,9 @@ public class MySecondCollectionTest {
     @Test
     public void checkHasNextIt() {
         MySecondCollection<Integer> col = new MySecondCollection<>();
+        col.add(5);
+        col.add(311);
+        col.add(47);
         col.add(5);
         col.add(311);
         col.add(47);
